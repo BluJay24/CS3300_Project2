@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script> <!--D3-->
+	<script type="text/javascript" src="./radialProgress.js"></script> <!--Radial Diagrams-->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> <!--Bootstrap-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!--Bootstrap-->
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> <!--Bootstrap-->
+	<link type="text/css" rel="stylesheet" href="./style.css"> <!--Radial Diagrams-->
+<style>
+	body {
+		background-color: #EBEBEB;
+	}
+	h3 {
+		font-size: 35px;
+		font-weight: bold;
+	}
+
+	#button {
+        width: 250px;
+       	height: 35px;
+       	color: white;
+       	font-size: 16px;
+    }
+
+	.div {
+		text-align: center;
+		font-family: Arial;
+	}
+
+    #cuba, #china, #usa, #france, #mexico, #russia, #australia, #ireland, #israel, #south_africa {
+        height: 175px;
+        margin-left: 20%;
+        float: left;
+    }
+	
+    #cuba .arc {
+        stroke-weight: 0.1;
+        fill: #5BC85B;
+    }
+
+    #china .arc {
+        stroke-weight: 0.1;
+        fill: #FFE303;
+    }
+
+    #usa .arc {
+        stroke-weight: 0.1;
+        fill: #FFE303
+    }
+
+    #france .arc {
+        stroke-weight: 0.1;
+        fill: #FF2400;
+    }
+
+    #mexico .arc {
+        stroke-weight: 0.1;
+        fill: #FFE303;
+    }
+
+    #russia .arc {
+        stroke-weight: 0.1;
+        fill: #660000;
+    }
+
+    #australia .arc {
+        stroke-weight: 0.1;
+        fill: #FF2400;
+    }
+
+    #ireland .arc {
+        stroke-weight: 0.1;
+        fill: #FF2400;
+    }
+
+    #israel .arc {
+        stroke-weight: 0.1;
+        fill: #5BC85B;
+    }
+
+    #south_africa .arc {
+        stroke-weight: 0.1;
+        fill: #FF2400;
+    }
+
+    .radial {
+        border-radius: 3px;
+        background: #EBEBEB;
+        color: red;
+    }
+
+</style>
+<title>Country Statistics</title>
+</head>
+<body>
+
+	<div class="div">
+		<h3>How do you compare versus other parts of the world?<h3>
+		<p style="font-size: 20px; font-weight: normal">Numbers represent pure alcohol consumption among adults (age 15+) in litres per capita per year</p>
+		<p style="font-size: 14px; font-weight: normal">Data taken from 2014 World Health Organization publication on various country's alcohol consumption<p>
+		<div id="button-div" text-align="center">
+			<button id="button" type="button" class="btn btn-danger" onclick="window.location='./index.html'";>Take me back to the drinks!</button>
+		</div>
+	</div>
+	       
+    <div style="text-align: left">
+         <div id="israel">
+        	<p style="font-size: 20px; font-weight: bold">Israel</p>
+        </div>
+        <div id="cuba">
+        	<p style="font-size: 20px; font-weight: bold">Cuba</p>
+        </div>
+        <div id="china">
+        	<p style="font-size: 20px; font-weight: bold">China<p>
+        </div>
+        <div id="mexico">
+        	<p style="font-size: 20px; font-weight: bold">Mexico</p>
+        </div>
+        <div id="usa">
+        	<p style="font-size: 20px; font-weight: bold">USA</p>
+        </div>
+        <div id="south_africa">
+        	<p style="font-size: 20px; font-weight: bold">South Africa</p>
+        </div>
+        <div id="australia">
+        	<p style="font-size: 20px; font-weight: bold">Australia</p>
+        </div>
+        <div id="france">
+        	<p style="font-size: 20px; font-weight: bold">France</p>
+        </div>
+        <div id="ireland">
+        	<p style="font-size: 20px; font-weight: bold">Ireland</p>
+        </div>
+        <div id="russia">
+        	<p style="font-size: 20px; font-weight: bold">Russia</p>
+        </div>
+    </div>
+<script>
+    start();
+
+    function start() {
+
+        var cuba = radialProgress("#cuba")
+                .diameter(150)
+                .value(5.2)
+                .render();
+
+        var china = radialProgress("#china")
+                .diameter(150)
+                .value(6.7)
+                .render();
+
+        var usa = radialProgress("#usa")
+                .diameter(150)
+                .value(8.6)
+                .render();
+
+        var france = radialProgress("#france")
+                .diameter(150)
+                .value(12.2)
+                .render();
+
+        var mexico = radialProgress("#mexico")
+                .diameter(150)
+                .value(7.2)
+                .render();
+
+        var russia = radialProgress("#russia")
+                .diameter(150)
+                .value(15.1)
+                .render();
+
+        var australia = radialProgress("#australia")
+                .diameter(150)
+                .value(12.2)
+                .render();
+
+        var ireland = radialProgress("#ireland")
+                .diameter(150)
+                .value(11.9)
+                .render();
+        
+        var israel = radialProgress("#israel")
+                .diameter(150)
+                .value(2.8)
+                .render();
+
+        var south_africa = radialProgress("#south_africa")
+                .diameter(150)
+                .value(11)
+                .render();
+    }
+
+</script>
+</body>
+</html>
