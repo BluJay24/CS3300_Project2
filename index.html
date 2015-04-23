@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+	<script src="http://d3js.org/d3.v3.min.js"></script> <!--D3-->
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> <!--D3 Tooltip-->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> <!--Bootstrap-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!--Bootstrap-->
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> <!--Bootstrap-->
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> <!--Radial Diagrams-->
+<head>
+	<style>
+	rect{
+	  stroke: black;
+	  stroke-width:1;
+	}
+
+	body {
+		background-color: #EBEBEB;
+	}
+
+	h3 {
+		font-size: 35px;
+		font-weight: bold;
+	}
+
+	.div {
+		text-align: center;
+		font-family: Arial;
+	}
+
+	#button {
+        	width: 300px;
+        	height: 35px;
+        	font-size: 16px;
+    }
+
+	#body { 
+		margin-top: 20px;
+	}
+
+	.d3-tip{
+	  line-height: 1;
+	  font-weight: bold;
+	  padding: 12px;
+	  background: rgba(0, 0, 0, 0.8);
+	  color: #fff;
+	  border-radius: 2px;
+	}
+	</style>
+
+	<title>Drinks Around the World</title>
+</head>
+<body>
+	<div class="div">
+		<h3 >Alcohols Around The World</h3>
+		<div id="button-div" text-align="center">
+		<button id="button" type="button" class="btn btn-info" onclick="window.location='./country_statistics.html'";>How do your drinking habits compare?</button>
+	</div>
+	<div id="body"></div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> <!--d3-tip for tooltips-->
+
+<script>
+
+	var width = window.innerWidth - 15,
+	    height = 500;
+
+	var width1 = 200; 
+	var width2 = 200; 
+
+	var x = d3.scale.linear()
+	    .range([0, width]);
+
+	var y = d3.scale.linear()
+	    .range([0, height]);
+
+	var color = d3.scale.category20c();
+
+	var partition = d3.layout.partition()
+	    .children(function(d) { return isNaN(d.value) ? d3.entries(d.value) : null; })
+	    .value(function(d) { return d.value; });
+
+	var svg = d3.select("#body").append("svg")
+	    .attr("width", width)
+	    .attr("height", height);
+
+	var tip = d3.tip().attr("class", "d3-tip")
+		.html(function(d){
+			//display tooltip data here
+			if(d.key != ""){
+				return d.key;
+			}
+			else{
+				return "Press the top bar to zoom out"
+			}
+		});
+
+	//var rect = svg.selectAll("rect");
+	var cells = svg.selectAll("g");
+
+	d3.json("recipes.json", function(error, root) {
+		var cell = svg.selectAll("g").data(partition(d3.entries(root)[0]))
+			.enter().append("svg:g")
+			.attr("transform", function(d){ return "translate(" + x(d.x) + "," + y(d.y) + ")"; })
+			.on("click", clicked)
+			.call(tip)
+			.on("mouseover", tip.show)
+			.on("mouseout", tip.hide);
+
+		cell.append("svg:rect")
+		.attr("width", function(d){ return x(d.dx); })
+		.attr("height", function(d){ return y(d.dy); })
+		.attr("fill", function(d){ return color((d.children ? d : d.parent).key); });
+
+		cell.append("svg:text")
+		.attr("x", function(d){ return d.y+15; })
+		.attr("y", function(d){ return d.x+40; })
+		.text(function(d){ return d.key; })
+		.style("fill", "white")
+		.style("font-size", 26)
+		.style("font-family", "Arial")
+		.style("pointer-events", "none")
+		.style("opacity", function(d){
+			//hide text if box is too big
+			var box = this.getBBox();
+			var width = x(d.dx);
+			var height = y(d.dy);
+			
+			if((box.height+15) > height || (box.width+20) > width){
+				return 0;
+
+			}
+			return 1;
+		});
+
+
+	  /*rect = rect
+	      .data(partition(d3.entries(root)[0]))
+	    .enter().append("rect")
+	      .attr("x", function(d) { return x(d.x); })
+	      .attr("y", function(d) { return y(d.y); })
+	      .attr("width", function(d) { return x(d.dx); })
+	      .attr("height", function(d) { return y(d.dy); })
+	      .attr("fill", function(d) { return color((d.children ? d : d.parent).key); })
+	      .on("click", clicked);*/
+	
+
+		function clicked(d) {
+			x.domain([d.x, d.x + d.dx]);
+			y.domain([d.y, 1]).range([d.y ? 20 : 0, height]);
+
+			cell.transition()
+			.attr("transform", function(d){ return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+
+			cell.select("rect").transition()
+			.duration(750)
+			.attr("width", function(d){ return x(d.x + d.dx) - x(d.x); })
+			.attr("height", function(d){ return y(d.y + d.dy) - y(d.y); });
+
+
+			cell.select("text").transition().duration(750)
+			.style("opacity", function(d){
+				//hide text if box is too big
+				var box = this.getBBox();
+				var width = x(d.x + d.dx) - x(d.x);
+				var height = y(d.y + d.dy) - y(d.y);
+				
+
+				if((box.height+15) > height || (box.width+20) > width){
+					return 0;
+				}
+				return 1;
+			});
+
+
+		  /*x.domain([d.x, d.x + d.dx]);
+		  y.domain([d.y, 1]).range([d.y ? 20 : 0, height]);
+
+		  rect.transition()
+		      .duration(750)
+		      .attr("x", function(d) { return x(d.x); })
+		      .attr("y", function(d) { return y(d.y); })
+		      .attr("width", function(d) { return x(d.x + d.dx) - x(d.x); })
+		      .attr("height", function(d) { return y(d.y + d.dy) - y(d.y); });
+		      */
+		}
+
+		function showData(d){
+			cell.append("svg:title").text(function(){ return d.key; })
+			.style("z-index", "10");
+		}
+	});
+</script>
+</body>
+</html>
