@@ -1,0 +1,345 @@
+{
+	"":{
+		"USA":{
+			"Jack Daniel's":{
+				"Apple Jacks":{
+					"Apple Schnapps": 4998,
+					"Jack Daniel's Whiskey": 4998
+				},
+				"Jack and Ginger":{
+					"Ginger Ale": 15000,
+					"Jack Daniel's Whiskey": 4998
+				}
+
+			},
+			"SKYY Vodka":{
+				"SKYYdiver":{
+					"SKYY Vodka": 4998,
+					"Orange Juice": 12498,
+					"Orange Slice": 2499
+				},
+				"Pacific SKYY Blue":{
+					"SKYY Vodka": 2499,
+					"Blue Curacao": 2499,
+					"Lime Juice": 2499,
+					"Triple Sec": 2499
+				}
+			},
+			"California Wine": 30000
+		},
+		"Mexico":{
+			"Patron Silver Tequila":{
+				"Lime Margarita":{
+					"Patron": 2727,
+					"Lime Juice": 2727,
+					"Cucumber Juice": 5454,
+					"Cucumber and Lime Slices": 2727
+				},
+				"Spicy Grapefruit Margarita":{
+					"Patron": 2727,
+					"Habanero Chile": 2727,
+					"Fresh Pink Grapefruit Juice": 8181,
+					"Kosher Salt (for glass)": 2727
+				}
+			},
+			"Kahlua":{
+				"Mexican Coffee":{
+					"Espresso": 6921,
+					"Steamed Milk": 6921,
+					"Vanilla Syrup": 2307,
+					"Kahlua": 2307,
+					"Cinnamon & Whipped Cream": 2307
+				},
+					"Kahlua on the Rocks":{
+						"Kahlua": 6921,
+						"Ice": 2307
+					}
+			},
+			"Corona":{
+				"Straight Up":{
+					"Corona": 3000,
+					"Lime Wedge": 3000
+				},
+				"Chavela":{
+					"Corona": 12000,
+					"Tomato Juice": 3000,
+					"Hot Sauce": 3000,
+					"Lime Wedge": 3000,
+					"Kosher Salt": 3000
+				}
+
+			}
+		},
+		"Ireland":{
+			"Bailey's Irish Cream":{
+				"Bailey's Ice Coffee":{
+					"Baileys Irish Cream":4284,
+					"Coffee":8571
+				},
+				"Baileys Over Ice":{
+					"Baileys Irish Cream":12855,
+					"Ice Cubes":4284
+				}
+			},
+			"Guinness":{
+				"Trojan Horse":{
+					"Coke":7500,
+					"Guinness Draught":2499
+				},
+				"Irish Carbomb":{
+					"Baileys Irish Cream":4998,
+					"Kahlua":2499,
+					"Jameson Irish Whiskey":2499,
+					"Guinness":9999
+				}
+			},
+			"Jameson Irish Whiskey":{
+				"Irish Lady":{
+					"Jameson Irish Whiskey":4284,
+					"Green Curacao":2142,
+					"Lemon Juice":2142
+				},
+				"Leprechaun's Revenge":{
+					"Blueberry Schnapps":6426,
+					"Raspberry Vodka":6426,
+					"Jameson Irish Whiskey":6426,
+					"Cranberry Schnapps":2142
+				}
+			}
+		},
+		"France":{
+			"Grey Goose Vodka":{
+				"Grey Goose Le Fizz":{
+					"Grey Goose Vodka":5625,
+					"St. Germain liqueur":1875,
+					"Lime Juice":1875,
+					"Soda Water":3750
+				},
+				"French Martini":{
+					"Grey Goose Vodka":5625,
+					"Fresh Pineapple Juice":7500,
+					"Chambord":1875,
+					"Raspberries":1875
+				}
+			},
+			"Hennessey Cognac":{
+				"Hennessy Black Berry":{
+					"Hennessey Black":3870,
+					"Cranberry Juice":6774,
+					"Apple Juice":4836,
+					"Dash of Lime Juice":966,
+					"Ice Cubes":966,
+					"Blackberries":966
+				},
+				"Hennessey Citrus":{
+					"Hennessey V.S.":2901,
+					"Lime Juice":966,
+					"Coke":6774,
+					"Lime to Garnish":966
+				}
+			},
+			"Champagne":{
+				"Mimosa":{
+					"Champagne":6000,
+					"Orange Juice":6000
+				},
+				"Bellini":{
+					"Fresh Peach Puree":6000,
+					"Champagne":12000
+				}
+			}
+		},
+		"Cuba":{
+			"Bacardi 151":{
+				"Bahama Mama":{
+					"Coffee Liqueur":4000,
+					"Dark Rum":8000,
+					"Coconut Liqueur":8000,
+					"Bacardi 151":4000,
+					"1/2 Lemon":4000,
+					"Pineapple Juice":16000,
+					"Stawberry":4000
+				},
+				"Goombay Smash":{
+					"Pineapple Juice":12000,
+					"Orange Juice":8000,
+					"Malibu Rum":8000,
+					"Light Rum":4000,
+					"Bacardi 151":4000,
+					"Dark Rum":4000,
+					"Pineapple Wedges":4000,
+					"Orange Slices":4000,
+					"Ice Cubes":4000
+				}
+			}
+		},
+		"Australia":{
+			"Beenleigh Rum":{
+				"Winter's Coming":{
+					"Beenleigh 5 Year Old Dark Rum":6249,
+					"Grand Marnier":1248,
+					"Fresh Orange Juice":1248,
+					"Cherry Heering":2499,
+					"Cinnamon Syrup":1248,
+					"Angostura Bitters":1248
+				},
+				"Banana Bender":{
+					"Beenleigh 5 Year Old Dark Rum":7500,
+					"Cinnamon Banana Cream":7500,
+					"Coconut Syrup":1248
+				}
+			},
+			"Cooranbong Vodka":{
+				"Victorian Breeze":{
+					"Cooranbong Vodka":7500,
+					"Pineapple":187,
+					"Peach Schnapps":1875,
+					"Orange Juice":1875,
+					"Cranberry Juice":1875
+				},
+				"Australian Crush":{
+					"Cooranbong Vodka":5625,
+					"Simple Syrup":1875,
+					"Lime Wedges":7500
+				}
+			},
+			"McAllister Whiskey":{
+				"Good Company":{
+					"McAllister Reserve Scotch Whiskey":6666,
+					"Honey":1665,
+					"Lemon Juice":1665,
+					"Orange Juice":1665,
+					"Ginger Beer":3333,
+					"Star Anise and Orange Peel for Garnish":1665
+				},
+				"Scotch Guard":{
+					"Label 5 blended Scotch Whiskey":4998,
+					"Lime Juice":1665,
+					"Lemon Curd":1665,
+					"Ginger Beer":3333,
+					"Dash of bitters":1665
+				}
+			}
+		},
+		"S. Africa":{
+			"Amarula Cream":{
+				"African Lullaby":{
+					"Amarula Cream":7866,
+					"Coconut Milk":1698,
+					"Milk":7866,
+					"Nutmeg":1698,
+					"Ice Cubes":1698
+				},
+				"African Breeze":{
+					"Amarula Cream":2846,
+					"Cointreau":1698,
+					"Brown Sugar":489,
+					"Ice Cubes":1698
+				}
+			},
+			"Starr Rum":{
+				"Starr Cider":{
+					"Starr African Rum":936,
+					"Apple Cider (hot or cold)":1875
+				},
+				"Starr Eggnog":{
+					"Starr Rum":7500,
+					"8 large eggs (separated)":7500,
+					"Powedered Sugar":3750,
+					"Whole Milk":3750,
+					"Heavy Cream":1875,
+					"Vanilla Extract":936,
+					"Nutmeg":1875
+				}
+			},
+			"Mainstay Vodka":{
+				"Tall 54":{
+					"Mainstay 54":2607,
+					"Plum Bitters":3912,
+					"Dry Lemon Peel":1302
+				},
+				"Irish Delight":{
+					"Mainstay Island Fusion":5217,
+					"Cranberry Juice":10434,
+					"Rose Cordial":1302,
+					"Lime Juice":1302,
+					"Orange Zest":3912
+				}
+			}
+		},
+		"Russia":{
+			"Russian Standard Vodka":{
+				"Russian Mule":{
+					"Vodka":2497,
+					"Ginger Beer/Ale":7497
+				},
+				"Raspberryoska":{
+					"Vodka":4999,
+					"Lemon Juice":2497,
+					"Raspberries":2497,
+					"Tonic Water":2497,
+					"Crushed Ice":2497,
+					"Half a Lime":2497
+				},
+				"Tokstoy Tang":{
+					"Vodka":4999,
+					"Lemon Juice":2497,
+					"Lemonade":9999
+				}
+			},
+			"Ginger Beer":{
+				"Yorsh":{
+					"Vodka":8032,
+					"Ginger Beer":801
+				},
+				"Beer Cup":{
+					"Gin":1606,
+					"Lager":16069,
+					"Ginger Beer":16069,
+					"Lemon Juice":1606,
+					"Soda Water":801
+				}
+			}
+		},
+		"China":{
+			"Maotai (Bai Jiu)":33333,
+			"Huang Jiu":33333,
+			"Tsingtao (Beer)":33333
+		},
+		"Israel":{
+			"Arak":{
+				"Arak Madu":{
+					"Arak":11839,
+					"Lime Juice":4734,
+					"Honey":4734,
+					"Water":2367
+				},
+				"Arak Attack":{
+					"Arak":9472,
+					"Grenadine":2367,
+					"Orange Juice":9472
+				}
+			},
+			"Arrack":{
+				"Swedish Punsch":{
+					"Batavia Arrack":2569,
+					"El Dorado Rum":5139,
+					"Water":2569,
+					"Black Tea":639,
+					"Sugar":2569
+				},
+				"Cold Ruby Punch":{
+					"Batavia Arrack":5139,
+					"Ruby Port":5139,
+					"Green Tea":8219,
+					"Sugar":2569
+				},
+				"Arrack Cooler":{
+					"Arrack":7713,
+					"Bacardi 151":2569,
+					"Gomme Syrup":639
+				}
+			}
+		}
+	}
+}
