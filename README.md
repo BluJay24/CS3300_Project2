@@ -1,6 +1,8 @@
-# 3300project2
-CS 3300 Project 2 
+# CS3300_Project2
 
-Data Driven Web Application Course
+Second project for CS 3300, a course on Data Driven Web Applications at Cornell University. 
 
-Second project in the course. Took a creative idea and turned it into a creative design which was applicable and fun for students to be engaged in. 
+The goal of this project was to incorporate interesting data into a dynamic data visualization that could be interactive for the user as well as synthesize or digest variable data via navigation. 
+
+This projects focus was more geared towards being fun and creative, so we took a dataset that is in-depth but also very interesting.  
+
