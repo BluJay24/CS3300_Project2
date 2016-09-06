@@ -6,3 +6,4 @@ The goal of this project was to incorporate interesting data into a dynamic data
 
 This projects focus was more geared towards being fun and creative, so we took a dataset that is in-depth but also very interesting.  
 
+Portions of the data viz has code borrowed from other libraries. 
